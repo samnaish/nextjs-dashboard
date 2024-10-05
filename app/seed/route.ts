@@ -101,19 +101,19 @@ async function seedRevenue() {
   return insertedRevenue;
 }
 
-export async function GET() {
-  try {
-    await client.sql`BEGIN`;
-    await seedUsers();
-    await seedCustomers();
-    await seedInvoices();
-    await seedRevenue();
-    await client.sql`COMMIT`;
+// export async function GET() {
+//   try {
+//     await client.sql`BEGIN`;
+//     await seedUsers();
+//     await seedCustomers();
+//     await seedInvoices();
+//     await seedRevenue();
+//     await client.sql`COMMIT`;
 
-    Response.json({ message: 'Database seeded successfully' });
-  } catch (error) {
-    await client.sql`ROLLBACK`;
-    Response.json({ error }, { status: 500 });
-  }
-};
+//     Response.json({ message: 'Database seeded successfully' });
+//   } catch (error) {
+//     await client.sql`ROLLBACK`;
+//     Response.json({ error }, { status: 500 });
+//   }
+// };
   
