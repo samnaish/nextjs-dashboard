@@ -101,6 +101,7 @@ async function seedRevenue() {
   return insertedRevenue;
 }
 
+export async function GET() {
   try {
     await client.sql`BEGIN`;
     await seedUsers();
@@ -114,4 +115,5 @@ async function seedRevenue() {
     await client.sql`ROLLBACK`;
     return Response.json({ error }, { status: 500 });
   }
-}
+};
+  
