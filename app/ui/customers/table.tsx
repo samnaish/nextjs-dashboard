@@ -2,8 +2,7 @@ import Image from 'next/image';
 import { lusit } from '@/app/ui/fonts';
 import Search from '@/app/ui/search';
 import {
-  FormattedCustomersTable,
-  CustomersTableType
+  FormattedCustomersTable 
 } from '@/app/lib/definitions';
 import { fetchFilteredCustomers } from '@/app/lib/data';
 
