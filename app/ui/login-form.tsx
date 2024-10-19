@@ -3,8 +3,7 @@
 import { lusit } from '@/app/ui/fonts';
 import {
   AtSymbolIcon,
-  KeyIcon,
-  ExclamationCircleIcon,
+  KeyIcon
 } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './button';
@@ -13,12 +12,13 @@ import { useForm } from "react-hook-form";
 import { authenticate } from '@/app/lib/actions';
 
 export default function LoginForm() {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
   //   const [errorMessage, formAction, isPending] = useActionState(
   //   authenticate,
   //   undefined,
   // );
   // console.log(errors);
+  console.log(errors);
   return (
     <form className="space-y-3" onSubmit={handleSubmit((data) => {
       console.log(data);
